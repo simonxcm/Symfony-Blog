@@ -25,6 +25,7 @@ class Articles
     #[ORM\Column(type: 'string', length: 50)]
     private $author;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,10 +72,19 @@ class Articles
         return $this->author;
     }
 
-    public function setAuthor(string $author): self
+    public function setAuthor($author): self
     {
         $this->author = $author;
 
         return $this;
     }
+
+    public function setCategory($category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+    
+
 }
