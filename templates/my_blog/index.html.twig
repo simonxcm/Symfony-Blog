@@ -3,18 +3,47 @@
 {% block title %}Hello MyBlogController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light space">
+        <a class="navbar-brand margin bold-title" href="#">DONKEY NEWS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/Symon/Desktop/EXO2/SYMFONY/myBlog/src/Controller/MyBlogController.php'|file_link(0) }}">src/Controller/MyBlogController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/Symon/Desktop/EXO2/SYMFONY/myBlog/templates/my_blog/index.html.twig'|file_link(0) }}">templates/my_blog/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Catégories</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Auteurs</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 g-4">
+            {% for article in articles %}
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="https://external-preview.redd.it/Fu0v8Ity-Tfi4G6xladupNvFakVTTOE4WgFI8dhmX68.jpg?auto=webp&s=64b58b3973b4a183841a252f50a418d9edc0d53b" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ article.title }} </h5>
+                            <h6 class="card-title"> {{ article.description }} </h6>
+                            <p class="card-text">{{ article.content }}</p>
+                            <p class="card-footer"><small class="text-muted">Written by {{ article.author }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+                {{ knp_pagination_render(articles) }}
+    </div>
+
+
 {% endblock %}
+

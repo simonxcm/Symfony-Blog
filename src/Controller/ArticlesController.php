@@ -13,10 +13,11 @@ class ArticlesController extends AbstractController
     #[Route('/articles/{slug}', name: 'articles')]
     public function index(ArticlesRepository $articlesRepository): Response
     {
+
         return $this->render('articles/index.html.twig', [
             'articles' => $articlesRepository->findAll(),
         ]);
     }
-}
 
+}
 
