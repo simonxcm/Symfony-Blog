@@ -52,8 +52,6 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
             $manager->persist($article4); 
 
-        $manager->flush();
-
         $article5 = new Articles();
         $article5
             ->setTitle('Nothing')
@@ -63,6 +61,76 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
             $manager->persist($article5); 
+
+        $article6 = new Articles();
+        $article6
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article6); 
+
+        $article7 = new Articles();
+        $article7
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article7); 
+
+        $article8 = new Articles();
+        $article8
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article8); 
+
+        $article9 = new Articles();
+        $article9
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article9); 
+
+        $article10 = new Articles();
+        $article10
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article10); 
+
+        $article11 = new Articles();
+        $article11
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article11); 
+
+        $article12 = new Articles();
+        $article12
+            ->setTitle('Nothing')
+            ->setDescription('The brand new book about nothing')
+            ->setContent('Go to read this amazing book')
+            ->setSlug('nothing')
+            ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
+            ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
+            $manager->persist($article12); 
 
         $manager->flush();
     }

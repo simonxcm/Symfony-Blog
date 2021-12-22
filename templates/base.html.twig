@@ -16,7 +16,7 @@
     <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand margin" href="#">DONKEY NEWS</a>
+        <a class="navbar-brand margin bold-title" href="#">DONKEY NEWS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,15 +35,27 @@
             </ul>
         </div>
     </nav>
+    <div class="container">
+        <div class="row row-cols-3 row-cols-md-2 g-4">
+            {% for article in articles %}
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/Medias/coffee.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ article.title }} </h5>
+                            <h6 class="card-title"> {{ article.description }} </h6>
+                            <p class="card-text">{{ article.content }}</p>
+                            <p class="card-footer"><small class="text-muted">Written by {{ article.author }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
-    {% for article in articles %}
-      
-    <div> {{ article.title }} </div>
-    <div> {{ article.description }} </div>
-    <div> {{ article.content }} </div>
-    <div> Written by {{ article.author }} </div>
+    
 
-    {% endfor %}
+
         
     </body>
 </html>
