@@ -10,6 +10,7 @@ class AuthorFixtures extends Fixture
 
 {
     public const AUTHOR_SIMON = 'AUTHOR_SIMON';
+    public const AUTHOR_ANE = 'AUTHOR_ANE';
 
     public function load(ObjectManager $manager): void
     {
@@ -21,6 +22,15 @@ class AuthorFixtures extends Fixture
             ->setShortBio('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
         $manager->persist($author);
         $this->addReference(self::AUTHOR_SIMON, $author);
+
+        $author2 = new Author();
+        $author2
+            ->setFirstname('L\ane')
+            ->setLastname('dans Shrek')
+            ->setCompany('Donkey TV')
+            ->setShortBio('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+        $manager->persist($author2);
+        $this->addReference(self::AUTHOR_ANE, $author2);
 
         $manager->flush();
     }

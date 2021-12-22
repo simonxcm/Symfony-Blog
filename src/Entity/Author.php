@@ -64,7 +64,7 @@ class Author
         return $this->company;
     }
 
-    public function setShortBio($shortBio)
+    public function setShortBio(string $shortBio): self
     {
         $this->shortBio = $shortBio;
         return $this;
@@ -73,5 +73,10 @@ class Author
     public function getShortBio()
     {
         return $this->shortBio;
+    }
+
+    public function __toString()
+    {
+        return $this->firstname;
     }
 }
