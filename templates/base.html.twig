@@ -15,7 +15,7 @@
     </head>
     <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light space">
         <a class="navbar-brand margin bold-title" href="#">DONKEY NEWS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,11 +36,11 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row row-cols-3 row-cols-md-2 g-4">
+        <div class="row row-cols-2 row-cols-md-3 g-4">
             {% for article in articles %}
                 <div class="col">
-                    <div class="card">
-                        <img class="card-img-top" src="/assets/Medias/coffee.jpg" alt="Card image cap">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://external-preview.redd.it/Fu0v8Ity-Tfi4G6xladupNvFakVTTOE4WgFI8dhmX68.jpg?auto=webp&s=64b58b3973b4a183841a252f50a418d9edc0d53b" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"> {{ article.title }} </h5>
                             <h6 class="card-title"> {{ article.description }} </h6>
