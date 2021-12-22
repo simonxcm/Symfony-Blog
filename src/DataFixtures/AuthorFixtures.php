@@ -19,16 +19,16 @@ class AuthorFixtures extends Fixture
             ->setFirstname('Simon')
             ->setLastname('Simon')
             ->setCompany('Donkey News')
-            ->setShortBio('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+            ->setShortBio('Journaliste depuis l\'âge de 1 an, j\'aime écrire');
         $manager->persist($author);
         $this->addReference(self::AUTHOR_SIMON, $author);
 
         $author2 = new Author();
         $author2
-            ->setFirstname('L\ane')
+            ->setFirstname('L\'ane')
             ->setLastname('dans Shrek')
             ->setCompany('Donkey TV')
-            ->setShortBio('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+            ->setShortBio('Photo-reporter qui suivi les plus grands');
         $manager->persist($author2);
         $this->addReference(self::AUTHOR_ANE, $author2);
 

@@ -15,8 +15,8 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
         $article1 = new Articles();
         $article1
             ->setTitle('La vie est belle')
-            ->setDescription('C\est un bel article')
-            ->setContent('Ceci est le premier article de mon blog')
+            ->setDescription('Il n\'y a pas de bonne ou de mauvaise situation')
+            ->setContent('Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi.')
             ->setSlug('lavieestbelle')
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
@@ -26,7 +26,7 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
         $article2
             ->setTitle('Crypto')
             ->setDescription('Toutes les news sur la crypto')
-            ->setContent('Le deuxieme article de mon Blog')
+            ->setContent('Une cryptomonnaie, dite aussi cryptoactif, cryptodevise, monnaie cryptographique ou encore cybermonnaie, est une monnaie numérique émise de pair à pair (actif numérique), sans nécessité de banque centrale, utilisable au moyen d\'un réseau informatique décentralisé. ')
             ->setSlug('crypto')
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
@@ -36,7 +36,7 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
         $article3
             ->setTitle('MJ is alive!')
             ->setDescription('Mickael Jackson is alive')
-            ->setContent('Le troisième article de mon Blog')
+            ->setContent('Reconnu comme l\’artiste le plus titré de tous les temps, il est une figure principale de l\'histoire de l\'industrie du spectacle et l\'une des icônes culturelles majeures du XXe siècle. ')
             ->setSlug('mj')
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_ANE))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
@@ -46,7 +46,7 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
         $article4
             ->setTitle('Everything')
             ->setDescription('The brand new book about everything')
-            ->setContent('Le quatrième article de mon Blog')
+            ->setContent('Go to read this amazing book')
             ->setSlug('everything')
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_ANE))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
@@ -58,7 +58,7 @@ class ArticlesFixtures extends Fixture implements DependentFixtureInterface
         $article5
             ->setTitle('Nothing')
             ->setDescription('The brand new book about nothing')
-            ->setContent('Le cinquièeme article de mon Blog')
+            ->setContent('Go to read this amazing book')
             ->setSlug('nothing')
             ->setAuthor($this->getReference(AuthorFixtures::AUTHOR_SIMON))
             ->setCategory($this->getReference(CategoryFixtures::TECHNOLOGY));
